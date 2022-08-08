@@ -1,0 +1,39 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container col-sm-4 text-white rounded-top" style="background-color: rgba(245, 245, 248, 0.7); height: 400px">
+    <div class ="form-group;" style =" width: 500px; margin-left:35px;  padding-bottom: 60px; margin-top: 150px">
+            <div class="col-md-8 text-black;">
+                    {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-primary" role="alert">
+                                    <p1>{{ message }}.</p1>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endfor %}
+                    {% endif %}
+                <form method="POST">
+                    {% csrf_token %}
+                    <center>
+                    <fieldset class="form-group">
+                        <br>
+                        <h3 class="text-black"><b>Login</b></h3>
+                          <div class="form-group; text-black " style="padding:10px">
+                            <label for="exampleInputEmail1">Username *</label>
+                            <input type="text" class="form-control" name="username" required>
+                          </div>
+                          <div class="form-group, text-black" style="padding:10px">
+                            <label for="exampleInputPassword1">Password *</label>
+                            <input type="password" class="form-control" name="password" required>
+                          </div>
+                            <br>
+                          <button type="submit" class="btn btn-primary">Login</button>
+                    </fieldset>
+                        </center>
+                </form>
+            </div>
+    </div>
+</div>
+{% endblock content %}

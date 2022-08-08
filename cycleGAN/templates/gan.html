@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+<body>
+    <div class="row" style="margin-top: 60px; margin-left: 480px; width:1000px">
+      <div class="col-lg-4 col-sm-2 portfolio-item">
+        <div class="card h-100">
+          <a href="{% url 'classify' %}"><img class="card-img-top" src="static/assets/img/customer.png" alt="" width="300" height="300"></a>
+          <div class="card-body">
+            <center>
+                <h4 class="card-title">
+                  <a href="{% url 'classify' %}">Generative AI</a>
+                </h4>
+                <p class="card-text">A solution to reduce the KYC fraud.</p>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+{% endblock content %}
+</body>
